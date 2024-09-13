@@ -1,0 +1,17 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
