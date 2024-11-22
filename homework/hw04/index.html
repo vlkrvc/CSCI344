@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo App - Posts Panel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="./public/output.css">
-    <script type="module" src="./js/main.js" defer></script>
-
+    <title>Photo App</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="src/index.jsx" type="module" defer></script>
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto mt-16">
-        <section id="posts-panel" class="space-y-8"></section>
-    </div>
+    <!-- Link to navigate back to the homepage -->
+    <header class="p-4 bg-white border-b">
+        <a href="/" class="text-blue-500 hover:underline">Back to Homepage</a>
+    </header>
+
+    <!-- React App Injected Here -->
+    <div id="app"></div>
 </body>
 </html>

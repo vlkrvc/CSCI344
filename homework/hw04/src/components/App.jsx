@@ -1,35 +1,36 @@
 import React from "react";
-
-// custom components:
 import NavBar from "./NavBar";
 import Profile from "./Profile";
-import Suggestions from "./Suggestions";
 import Stories from "./Stories";
 import Posts from "./Posts";
+import Suggestions from "./Suggestions";
 
-export default function App({ username, token }) {
+export default function App({ token, username }) {
     return (
-        <>
-            {/* Navbar (already implemented for you ) */}
+        <div className="bg-gray-100 min-h-screen">
+            {/* Navigation Bar */}
             <NavBar username={username} />
 
-            {/* Main Panel */}
-            <main className="mt-[100px] md:max-w-[61vw] md:mr-[50px] px-6 md:pl-[5vw] lg:pl-[10vw]">
-                {/* Stories Panel */}
-                <Stories token={token} />
+            {/* Main Content */}
+            <div className="container mx-auto pt-20 px-4">
+                <div className="flex gap-6">
+                    {/* Left Sidebar */}
+                    <div className="w-1/4">
+                        <Profile token={token} />
+                        <Stories token={token} />
+                    </div>
 
-                {/* Posts */}
-                <Posts token={token} />
-            </main>
+                    {/* Posts Section */}
+                    <div className="w-1/2">
+                        <Posts token={token} />
+                    </div>
 
-            {/* Right Panel */}
-            <aside className="fixed top-[100px] left-[63vw] w-70 hidden md:block max-w-[300px]">
-                {/* Profile Panel */}
-                <Profile token={token} />
-
-                {/* Suggestions Panel */}
-                <Suggestions token={token} />
-            </aside>
-        </>
+                    {/* Right Sidebar */}
+                    <div className="w-1/4">
+                        <Suggestions token={token} />
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
