@@ -1,0 +1,9 @@
+*.pyc
+.env
+node_modules
+build
+dist
+env
+.vscode
+.DS_Store
+users.csv
